@@ -57,7 +57,6 @@ int part2 () {
     }
     if (first == -1) continue; // Skip lines without digits
     if (last == -1) last = first; // Line with single digit
-    cout << first << last << endl;
     sum += 10 * first + last;
   } 
   return sum;
@@ -76,7 +75,7 @@ int main() {
     myfile.close();
   }
 
-  // cout << part1() << endl;
+  cout << part1() << endl;
   cout << part2() << endl;
 
   return 0;
