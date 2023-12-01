@@ -44,7 +44,8 @@ int part2 () {
         int toSet = -1;
         // pretty inefficient but I don't care at the moment
         for (int j = 1; j <= 9; j++) {
-          if (s.find(nums[j - 1], i) == i) {
+          string currN = nums[j - 1];
+          if (i + currN.size() <= s.size() && s.substr(i, currN.size()) == currN) {
             toSet = j;
             break;
           }
@@ -56,7 +57,6 @@ int part2 () {
       }
     }
     if (first == -1) continue; // Skip lines without digits
-    if (last == -1) last = first; // Line with single digit
     sum += 10 * first + last;
   } 
   return sum;
