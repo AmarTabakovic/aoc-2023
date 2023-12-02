@@ -22,7 +22,6 @@ int part1() {
       }
     }
     if (first == -1) continue; // Skip lines without digits
-    if (last == -1) last = first; // Line with single digit
     sum += 10 * first + last;
   } 
   return sum;
